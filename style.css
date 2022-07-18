@@ -1,0 +1,32 @@
+body {
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.circle {
+    height: 10rem;
+    width: 10rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: relative;
+    animation: animate 4s linear infinite;
+}
+
+.circle::before {
+    content: "";
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    border-radius: 50%;
+    background-color: aqua;
+    box-shadow: 0 0 12px 2px aqua;
+}
+
+@keyframes animate {
+    to {
+        transform: rotate(360deg);
+    }
+}
